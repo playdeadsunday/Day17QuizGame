@@ -10,4 +10,7 @@ for i in range(len(question_data)):
 
 new_ob = QuizBrain(question_bank)
 
-new_ob.next_question()
+while new_ob.still_has_questions():
+    new_ob.next_question()
+
+print(f"\n\nYou've completed the quiz\nYour final score was: {new_ob.score}/{new_ob.question_number}")
